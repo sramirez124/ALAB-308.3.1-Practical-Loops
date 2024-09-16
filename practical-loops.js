@@ -72,7 +72,7 @@ for (let i = 0; i < csvString.length; i++) {
         break;
     }
 
-    if (currentCell === 4 && csvString[i + 1] === "\n"){
+    if (currentCell === 4 && csvString[i + 1] === "\n" || i + 1 === csvString.length){
         console.log(cell1, cell2, cell3, cell4);
     }
 }
