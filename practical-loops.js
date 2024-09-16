@@ -48,6 +48,15 @@ for (let i = 0; i < csvString.length; i++) {
         continue;
     }
 
+    if (csvString[i] === "\n"){
+        cell1 = '';
+        cell2 = '';
+        cell3 = '';
+        cell4 = '';
+        currentCell = 1;
+        continue;
+    }
+
     switch (currentCell){
         case 1:
             cell1 += csvString[i];
@@ -62,5 +71,8 @@ for (let i = 0; i < csvString.length; i++) {
             cell4 += csvString[i];
         break;
     }
+
+    if (currentCell === 4 && csvString[i + 1] === "\n"){
+        console.log(cell1, cell2, cell3, cell4);
+    }
 }
-console.log(cell1, cell2, cell3, cell4);
