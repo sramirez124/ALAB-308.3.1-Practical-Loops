@@ -11,3 +11,7 @@ for (let x = 0; x <= 100; x++) {
         console.log(x);
     }
 }
+
+// Part 2: Prime Time
+
+let n;
